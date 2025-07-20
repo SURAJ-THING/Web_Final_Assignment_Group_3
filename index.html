@@ -1,0 +1,410 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>The Asian Fusion Musical Restaurant</title>
+
+<style>
+* {margin:0;padding:0;box-sizing:border-box;}
+body {
+  font-family:'Roboto',sans-serif;
+  background:linear-gradient(to right,#fdfaf6,#fff7e6);
+  color:#333;
+}
+header {
+  background:#333;
+  color:white;
+  text-align:center;
+  padding:20px;
+}
+header h1 {
+  font-family:'Playfair Display',serif;
+  font-size:2.5em;
+}
+header p {
+  font-size: 1em;
+  margin-top: 10px;
+  color: #ffcc70;
+  animation: fadeIn 3s ease-in-out;
+}
+nav {
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-top: 15px;
+}
+nav a {
+  color:white;
+  text-decoration:none;
+  margin:5px 10px;
+  padding:5px 10px;
+  border:1px solid #FFA500;
+  border-radius:4px;
+  transition:all 0.3s;
+}
+nav a:hover {
+  background:#FFA500;
+  color:#333;
+}
+.hero {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:50vh;
+  background:url('img/bag.jpg') center/cover no-repeat;
+  color:white;
+  text-align:center;
+}
+.hero h2 {
+  background:rgba(0,0,0,0.5);
+  padding:15px;
+  border-radius:5px;
+  font-size:2em;
+  animation: slideIn 2s ease;
+}
+section {
+  padding:50px 20px;
+  max-width:1100px;
+  margin:auto;
+}
+h2 {
+  text-align:center;
+  font-family:'Playfair Display',serif;
+  margin-bottom:30px;
+  border-bottom:2px dashed #FFA500;
+  display:inline-block;
+  padding-bottom:5px;
+}
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+.card {
+  background:white;
+  border:2px solid #FFA500;
+  border-radius:8px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.1);
+  overflow:hidden;
+  transition:transform 0.4s,box-shadow 0.4s;
+}
+.card:hover {
+  transform:scale(1.05);
+  box-shadow:0 6px 12px rgba(0,0,0,0.3);
+}
+.card img {
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+.card h3 {
+  margin:10px;
+}
+.card p {
+  margin:0 10px 10px;
+}
+form {
+  display:grid;
+  gap:10px;
+}
+input,select,textarea,button {
+  padding:10px;
+  border:1px solid #ccc;
+  border-radius:4px;
+  font-family:inherit;
+}
+input:focus,textarea:focus,select:focus {
+  border:1px solid #FFA500;
+}
+button {
+  background:#FFA500;
+  color:#333;
+  font-weight:bold;
+  border:none;
+  cursor:pointer;
+  transition:background 0.3s,transform 0.3s;
+}
+button:hover {
+  background:#e69500;
+  transform:scale(1.05);
+}
+.contact {
+  background:#333;
+  color:white;
+  text-align:center;
+  padding:30px;
+}
+.contact p {
+  margin:8px 0;
+}
+.contact i {
+  margin-right:8px;
+  color:#FFA500;
+}
+.social {
+  margin-top:10px;
+}
+.social a {
+  color:#FFA500;
+  margin:0 10px;
+  font-size:1.4em;
+  transition:color 0.3s, transform 0.3s;
+}
+.social a:hover {
+  color:white;
+  transform:scale(1.2);
+}
+iframe {
+  width:100%;
+  border:0;
+  height:300px;
+  border-radius:8px;
+  margin-top:20px;
+}
+footer {
+  text-align:center;
+  padding:15px;
+  background:#222;
+  color:#ccc;
+  font-size:0.9em;
+}
+
+@keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(30px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+@media(max-width:600px){
+  nav {flex-direction:column;}
+  .hero h2 {font-size:1.6em;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+
+    <!-- Left Logo -->
+    <img src="img/logo1.jpg" alt="Logo Left" style="height: 150px; width: 200px; border-radius: 12px; object-fit: cover;">
+
+    <!-- Title and Subtitle -->
+    <div style="text-align: center; flex: 1;">
+      <h1 style="font-size: 3em; margin-bottom: 5px;">The Asian Fusion Musical Restaurant</h1>
+      <p style="font-size: 1.3em; color: #ffcc70;">Enjoy your meal and drinks with a musical environment — Live Monthly with GM JOON</p>
+    </div>
+
+    <!-- Right Logo -->
+    <img src="img/logo1.jpg" alt="Logo Right" style="height: 150px; width: 200px; border-radius: 12px; object-fit: cover;">
+
+  </div>
+
+  <nav>
+    <a href="#menu">Menu</a>
+    <a href="#specials">Specials</a>
+    <a href="#offers">Offers</a>
+    <a href="#reservation">Reserve</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+
+
+<section class="hero">
+  <h2>Fresh Ingredients, Memorable Moments, and Wonderful Music.</h2>
+</section>
+
+<!-- Menu Section -->
+<section id="menu">
+  <h2>Our Menu</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="img/trilogy.jpg">
+      <h3>East Asia Trilogy - 2450¥</h3>
+      <p>Japanese noodles, Korean kimchi, Chinese pancake fusion.</p>
+    </div>
+    <div class="card">
+      <img src="img/waiboki.jpg">
+      <h3>Waiboki - 1875¥</h3>
+      <p>WaiWai noodles, Korean toppings, with egg.</p>
+    </div>
+	<div class="card">
+      <img src="img/kimbab.jpg">
+      <h3>Himalayan Seoul Delight- 1200¥</h3>
+      <p>Himalayan Seoul Delight blends spicy Nepali Thukpa, fresh Korean Kimbap, and cool Ilam Ice Tea into a flavorful cultural fusion on one plate.</p>
+    </div>
+	<div class="card">
+      <img src="img/shrimp.jpg">
+      <h3>Golden Shrimp Noodle Bliss 1400¥</h3>
+      <p>Golden Shrimp Noodle Bliss is crispy golden shrimp and the satisfying, flavorful noodles in one delicious experience.</p>
+    </div>
+	<div class="card">
+      <img src="img/sea.jpg">
+      <h3>Ocean Harmony- 1200¥</h3>
+      <p>Ocean Harmony: Tokyo to Tandoori Table is a vibrant fusion seafood platter that brings together the finest coastal flavors from Japan, Korea, and India—featuring fresh sushi, spicy octopus, and rich tandoori fish, all beautifully arranged to celebrate Asia’s diverse seafood traditions.</p>
+    </div>
+	 <div class="card">
+      <img src="img/chicken.jpg">
+      <h3>Seoul Firebird Roast- 1925¥</h3>
+      <p>Seoul Firebird Roast is a whole crispy fried chicken glazed with spicy Korean gochujang sauce, garnished with sesame seeds and green onions, served with dipping sauce and pickled radish bringing bold heat and rich flavor in every bite.</p>
+    </div>
+    <div class="card">
+      <img src="img/omorice.jpg">
+      <h3>Omorice Khimchi Buff MoMo - 2510¥</h3>
+      <p>Nepali, Japanese, Korean fusion with momo and omurice.</p>
+    </div>
+    <div class="card">
+      <img src="img/sekurice.jpg">
+      <h3>Sekurice Island Platter - 2700¥</h3>
+      <p>Nepali sekuwa and Sri Lankan curry rice fusion.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Specials -->
+<section id="specials">
+  <h2>Today's Specials</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="img/yamori.jpg">
+      <h3>Fusion Dessert Platter - 900¥</h3>
+      <p>Yomari + Rasgulla + Payesh in silver leaf and petals.</p>
+    </div>
+    <div class="card">
+      <img src="img/aila.jpg">
+      <h3>Himalayan Aila Twist - 800¥</h3>
+      <p>Nepali spirit with mint & lime in copper carafe.</p>
+    </div>
+    <div class="card">
+      <img src="img/asian.jpg">
+      <h3>Asian Fusion Set - 3250¥</h3>
+      <p>Dim sum, curry, miso, biryani, momo, kimchi and more.</p>
+    </div>
+    <div class="card">
+      <img src="img/soju.jpg">
+      <h3>Harmony Highball - 1125¥</h3>
+      <p>Soju + Sake with yuzu, shiso and cherry blossom.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Drinks -->
+<section id="specials">
+  <h2>Drinks</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="img/sip.jpg">
+      <h3>Sip of Asia Per- 530¥</h3>
+      <p>Iconic traditional drinks from South and East Asia featuring Indian mango lassi, Korean sikhye, Chinese chrysanthemum tea, Bengali borhani, and Sri Lankan wood apple juice each sip reflecting the rich culture and flavor of its origin.</p>
+    </div>
+    <div class="card">
+      <img src="img/aila.jpg">
+      <h3>Himalayan Aila Twist - 800¥</h3>
+      <p>Nepali spirit with mint & lime in copper carafe.</p>
+    </div>
+    <div class="card">
+      <img src="img/kodo.jpg">
+      <h3>Spirits of the East- 650¥</h3>
+      <p>Spirits of the East unites Nepali Raksi and Japanese Sake in a warm, elegant fusion of tradition and taste.</p>
+    </div>
+    <div class="card">
+      <img src="img/soju.jpg">
+      <h3>Harmony Highball - 1125¥</h3>
+      <p>Soju + Sake with yuzu, shiso and cherry blossom.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Dessert -->
+<section id="specials">
+  <h2>Desserts</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="img/yamori.jpg">
+      <h3>Fusion Dessert Platter - 900¥</h3>
+      <p>Yomari + Rasgulla + Payesh in silver leaf and petals.</p>
+    </div>
+    <div class="card">
+      <img src="img/matcha.jpg">
+      <h3>Matcha Mithai Medley - 1010¥</h3>
+      <p>Matcha Mithai Medley blends Japanese matcha mousse and Indian gulab jamun cheesecake into a rich, elegant fusion of flavor and culture.</p>
+    </div>
+    <div class="card">
+      <img src="img/silken.jpg">
+      <h3>Silken Seoul Delight- 650¥</h3>
+      <p>Silken Seoul Delight blends warm Korean hotteok with jasmine ice cream and delicate Chinese almond tofu, creating a smooth, sweet fusion of texture and tradition.</p>
+    </div>
+    <div class="card">
+      <img src="img/mitho.jpg">
+      <h3>Mitho Nepal - 825¥</h3>
+      <p>Mitho Nepal The Sweet Heritage Platter is a celebration of Nepal’s rich dessert culture, featuring iconic sweets like Juju Dhau, Sel Roti, Lal Mohan, Fini, and Anarasa all beautifully arranged to reflect the warmth, tradition, and festive spirit of the country.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Offers -->
+<section id="offers">
+  <h2>Special Offers</h2>
+  <div class="grid">
+    <div class="card"><h3>Lunch Combo</h3><p>Free drink with lunch order.</p></div>
+    <div class="card"><h3>Dessert Discount</h3><p>20% off desserts today!</p></div>
+  </div>
+</section>
+
+<!-- Reservation -->
+<section id="reservation">
+  <h2>Reserve a Table</h2>
+  <form action="thankyou.html" method="get">
+    <input type="text" placeholder="Name" required>
+    <input type="email" placeholder="Email" required>
+    <input type="tel" placeholder="Phone" required>
+    <input type="date" required>
+    <input type="time" required>
+    <select required>
+      <option value="">Guests</option>
+      <option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option>
+    </select>
+    <textarea placeholder="Special Requests"></textarea>
+    <button type="submit">Reserve</button>
+  </form>
+</section>
+
+<!-- Reviews -->
+<section id="reviews">
+  <h2>Customer Reviews</h2>
+  <div class="grid">
+    <div class="card"><p>"Fusion dish was incredible!"</p><h3>- Krish Brown</h3></div>
+    <div class="card"><p>"Loved the shared lunch set!"</p><h3>- Mark</h3></div>
+    <div class="card"><p>"Dessert platter was a dream!"</p><h3>- Hiroyama</h3></div>
+  </div>
+</section>
+
+<!-- GM JOON Collaboration -->
+<section>
+  <h2>Monthly Live Music with GM JOON</h2>
+  <p style="text-align:center;">Don't miss our monthly live hip-hop & fusion music events by <strong>GM JOON</strong>.</p>
+ <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/01o3FXGgUDs?si=v8fm0zfG1DNsJxxd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="contact">
+  <h2>Contact Us</h2>
+  <p><i class="fas fa-map-marker-alt"></i> 7 Tanaka Monzencho, Kyoto, Japan</p>
+  <p><i class="fas fa-phone"></i> 075-711-0161</p>
+  <div class="social">
+    <a href="https://facebook.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/145/145802.png" width="30"></a>
+    <a href="https://instagram.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" width="30"></a>
+    <a href="https://youtube.com/@SurajThing" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" width="30"></a>
+  </div>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3267.041580681703!2d135.7767340752208!3d35.030689665436526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6001085a40096db1%3A0x8c895182522ac6d1!2sThe%20Kyoto%20College%20of%20Graduate%20Studies%20for%20Informatics!5e0!3m2!1sen!2sjp!4v1752747960986!5m2!1sen!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+
+<footer>
+  &copy; 2025 The Asian Fusion Musical Restaurant, Japan,Kyoto
+</footer>
+
+</body>
+</html>
